@@ -1,4 +1,4 @@
-import Currency from './3-currency'; // eslint-disable-line no-unused-vars
+import Currency from './3-currency';
 
 export default class Pricing {
   constructor(amount, currency) {
@@ -15,6 +15,9 @@ export default class Pricing {
   }
 
   set currency(val) {
+    if (!(val instanceof Currency)) {
+      throw new TypeError('Currency must of instance Currency');
+    }
     this._currency = val;
   }
 
