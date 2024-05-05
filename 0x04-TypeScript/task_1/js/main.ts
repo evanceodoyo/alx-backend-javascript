@@ -35,6 +35,42 @@ interface printTeacherFunction {
 
 const printTeacher: printTeacherFunction = (firstName: string, lastName: string) => {
     return `${firstName[0]}. ${lastName}`;
+};
+
+console.log(printTeacher("John", "Doe"));
+
+
+interface Constructor {
+    new (firstName: string, lastName: string): ClassInterface;
 }
 
-printTeacher("John", "Doe") 
+interface ClassInterface {
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+class StudentClass implements ClassInterface {
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return 'Currently working';
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
+
+// Create instances of StudentClass using the Constructor interface
+const StudentConstructor: Constructor = StudentClass;
+const student1 = new StudentConstructor('John', 'Doe');
+
+// Call methods on the instances
+console.log(student1.displayName()); // Output: John
+console.log(student1.workOnHomework()); // Output: Currently working
