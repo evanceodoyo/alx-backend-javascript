@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 
 function countStudents (path) {
-  fs.readFile(path, 'utf8', (err, data) => {
+  fs.readFileSync(path, 'utf8', (err, data) => {
     if (err) {
       throw new Error('Cannot load the database');
     }
