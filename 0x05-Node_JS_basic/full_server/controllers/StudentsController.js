@@ -3,7 +3,7 @@ import readDatabase from '../utils';
 export default class StudentsController {
   static async getAllStudents(request, response) {
     try {
-      const result = await readDatabase('./database.csv');
+      const result = await readDatabase(process.argv[2]);
       const sortedKeys = Object.keys(result)
         .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
@@ -33,7 +33,7 @@ export default class StudentsController {
         return response.status(500).send('Major parameter must be CS or SWE');
       }
 
-      const result = await readDatabase('./database.csv');
+      const result = await readDatabase(process.argv[2]);
       const names = result[major].map((student) => student.firstname).join(', ');
 
       return response.status(200).send(`List: ${names}`);
