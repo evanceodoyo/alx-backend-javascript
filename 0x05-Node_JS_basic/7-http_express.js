@@ -39,15 +39,15 @@ const countStudents = async (path = 'database.csv') => {
 };
 
 app.get('/', (_req, res) => {
-  res.send('Hello Holberton School!');
+  res.status(200).send('Hello Holberton School!');
 });
 
 app.get('/students', async (_req, res) => {
   try {
     const result = await countStudents(process.argv[2]);
-    res.send(`This is the list of our students\n${result}`);
+    res.status(200).send(`This is the list of our students\n${result}`);
   } catch (err) {
-    res.send(err.message);
+    res.status(404).send(err.message);
   }
 });
 
