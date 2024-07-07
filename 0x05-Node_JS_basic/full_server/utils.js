@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const readDatabase = (path = '../database.csv') => new Promise((resolve, reject) => {
+const readDatabase = (path = './database.csv') => new Promise((resolve, reject) => {
   fs.readFile(path, (err, data) => {
     if (err) {
       reject(new Error('Cannot load the database'));
