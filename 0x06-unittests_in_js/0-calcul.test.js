@@ -10,6 +10,11 @@ describe('calculateNumber', function () {
         assert.equal(calculateNumber(1, 3.7), 5);
     });
 
+    it('should return 5 when if `a = 1.5` [rounded] and `b = 3` [rounded]', function () {
+        assert.equal(calculateNumber(1.5, 3), 5);
+    });
+
+
     it('should return 5 when if `a = 1.2` [rounded] and `b = 3.7 [rounded]`', function () {
         assert.equal(calculateNumber(1.2, 3.7), 5);
     });
