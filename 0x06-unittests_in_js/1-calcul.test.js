@@ -38,7 +38,7 @@ describe('calculateNumber', function () {
             assert.equal(calculateNumber('SUBTRACT', 0, 3.0), -3);
         });
     
-        it('should return return the right number', function () {
+        it('should return the right number', function () {
             assert.equal(calculateNumber('SUBTRACT', 1.3, 0), 1);
             assert.equal(calculateNumber('SUBTRACT', 0, 1.2), -1);
             assert.equal(calculateNumber('SUBTRACT', 1.3, 1.3), 0);
