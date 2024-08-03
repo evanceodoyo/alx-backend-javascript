@@ -1,0 +1,13 @@
+{
+    "name": "0x06-unittests_in_js",
+    "version": "1.0.0",
+    "description": "Unittests in JavaScript",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [],
+    "author": "Evance Odoyo",
+    "devDependencies": {
+        "mocha": "^10.7.0"
+    }
+}
