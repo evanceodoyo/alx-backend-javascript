@@ -8,6 +8,7 @@
     "keywords": [],
     "author": "Evance Odoyo",
     "devDependencies": {
+        "chai": "^4.5.0",
         "mocha": "^10.7.0"
     }
 }
