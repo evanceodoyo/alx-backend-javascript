@@ -73,6 +73,6 @@ describe('calculateNumber', function () {
     describe('DIVIDE with 0', function () {
         it('should return `Error`', function() {
             assert.equal(calculateNumber('DIVIDE', 1.3, 0), 'Error');
-        })
+        });
     });
 });
